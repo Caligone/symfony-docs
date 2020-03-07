@@ -1405,7 +1405,7 @@ and ``BitBucketCodeRepository`` classes:
 
 Once configured, the serializer uses the mapping to pick the correct class::
 
-    $serialized = $serializer->serialize(new GitHubCodeRepository());
+    $serialized = $serializer->serialize(new GitHubCodeRepository(), 'json');
     // {"type": "github"}
 
     $repository = $serializer->deserialize($serialized, CodeRepository::class, 'json');
